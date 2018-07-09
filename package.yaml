@@ -1,0 +1,33 @@
+name:                asm-monad
+version:             0.1.0.0
+github:              "anastos/asm-monad"
+license:             BSD3
+author:              "Mark Anastos"
+maintainer:          "MAnastos98@gmail.com"
+copyright:           "2018 Mark Anastos"
+
+extra-source-files:
+- readme.md
+
+description:         Please see the README on GitHub at <https://github.com/anastos/asm-monad#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- containers
+- lens
+- mtl
+
+library:
+  source-dirs: src
+
+executables:
+  example:
+    main:                Main.hs
+    source-dirs:         example
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - asm-monad
+
